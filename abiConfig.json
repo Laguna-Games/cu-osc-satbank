@@ -1,0 +1,132 @@
+{
+    "projectName": "CU-Contract-SatBank",
+    "buildDirectory": "build",
+    "abiOutputDirectory": "abis",
+    "abiConfigurations": [
+        {
+            "configuration": "lgInternal",
+            "sortedJSON": true,
+            "searchRecursively": true,
+            "contractsToInclude": [],
+            "contractsToIgnore": [
+                "IDiamondCut",
+                "IDiamondLoupe",
+                "IERC165",
+                "IERC173",
+                "MockToken",
+                "MockTerminus"
+            ],
+            "eventsToIgnore": [],
+            "functionsToIgnore": [],
+            "selectorsToIgnore": [],
+            "eventsPrecedence": {
+                "OwnershipTransferred": "LibDiamond",
+                "DiamondCut": "LibDiamond"
+            }
+        },
+        {
+            "configuration": "secondParty",
+            "sortedJSON": true,
+            "searchRecursively": true,
+            "contractsToInclude": [],
+            "contractsToIgnore": [
+                "IDiamondCut",
+                "IDiamondLoupe",
+                "IERC165",
+                "IERC173",
+                "MockToken",
+                "DebugMumbaiCutFacet",
+                "DebugFacet",
+                "DiamondLoupeFacet",
+                "MockTerminus",
+                "SupportInterfacesInitializer",
+                "TokenInitializer"
+            ],
+            "eventsToIgnore": [],
+            "functionsToIgnore": [
+                "setAppOwner",
+                "createNewApp",
+                "resetPublisherFees",
+                "setPublisherFee",
+                "diamondCut",
+                "transferOwnership",
+                "addTokenRegistry",
+                "init",
+                "removeTokenRegistry",
+                "resetDisbursementLimit",
+                "resetMaxDisbursementPerDay",
+                "setMaxDisbursementPerDay",
+                "setTxDisbursementLimit",
+                "surrenderPoolControl"
+            ],
+            "selectorsToIgnore": [],
+            "eventsPrecedence": {
+                "OwnershipTransferred": "LibDiamond",
+                "DiamondCut": "LibDiamond"
+            }
+        },
+        {
+            "configuration": "publicWeb",
+            "sortedJSON": true,
+            "searchRecursively": true,
+            "contractsToInclude": [],
+            "contractsToIgnore": [
+                "IDiamondCut",
+                "IDiamondLoupe",
+                "IERC165",
+                "IERC173",
+                "MockToken",
+                "DebugMumbaiCutFacet",
+                "AccessControlFacet",
+                "DebugFacet",
+                "DiamondLoupeFacet",
+                "MockTerminus",
+                "SupportInterfacesInitializer",
+                "TokenInitializer"
+            ],
+            "eventsToIgnore": [],
+            "functionsToIgnore": [
+                "createNewApp",
+                "resetPublisherFees",
+                "setAppDepositActive",
+                "setAppName",
+                "setAppWithdrawActive",
+                "setPublisherFee",
+                "diamondCut",
+                "owner",
+                "transferOwnership",
+                "activateProduct",
+                "addProductCost",
+                "createProduct",
+                "createProductWithCosts",
+                "deactivateProduct",
+                "deleteProduct",
+                "resetProductCosts",
+                "setBundleSize",
+                "addTokenRegistry",
+                "claimMessageHash",
+                "createDrop",
+                "depositToApp",
+                "init",
+                "removeTokenRegistry",
+                "resetDisbursementLimit",
+                "resetMaxDisbursementPerDay",
+                "setDropAuthorization",
+                "setDropStatus",
+                "setDropUri",
+                "setMaxDisbursementPerDay",
+                "setTxDisbursementLimit",
+                "surrenderPoolControl",
+                "withdrawERC1155",
+                "withdrawERC20",
+                "withdrawERC721",
+                "withdrawFromApp"
+            ],
+            "selectorsToIgnore": [],
+            "eventsPrecedence": {
+                "OwnershipTransferred": "LibDiamond",
+                "DiamondCut": "LibDiamond"
+            }
+        }
+    ]
+}

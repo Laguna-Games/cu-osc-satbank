@@ -1,0 +1,3629 @@
+[
+    {
+        "type": "function",
+        "name": "getAppBalance",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x05ac6eb6"
+    },
+    {
+        "type": "function",
+        "name": "getAppCount",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "appCount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x80109fea"
+    },
+    {
+        "type": "function",
+        "name": "getAppIDfromRequestID",
+        "inputs": [
+            {
+                "name": "embeddedRequestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "appID",
+                "type": "uint32",
+                "internalType": "uint32"
+            }
+        ],
+        "stateMutability": "pure",
+        "selector": "0xbaa2f468"
+    },
+    {
+        "type": "function",
+        "name": "getAppName",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "appName",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xed0c5f8f"
+    },
+    {
+        "type": "function",
+        "name": "getAppStatus",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "appName",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "appBalance",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "depositsAllowed",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "withdrawsAllowed",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "publisherFees",
+                "type": "tuple[]",
+                "internalType": "struct LibStructs.Fee[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "percent",
+                        "type": "uint8",
+                        "internalType": "uint8"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc8dbcd93"
+    },
+    {
+        "type": "function",
+        "name": "adminTerminusInfo",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xa69d7337"
+    },
+    {
+        "type": "function",
+        "name": "batchClaim",
+        "inputs": [
+            {
+                "name": "dropIDList",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "requestIDList",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "blockDeadlineList",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "amountList",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "signerList",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "signatureList",
+                "type": "bytes[]",
+                "internalType": "bytes[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x39fc3096"
+    },
+    {
+        "type": "function",
+        "name": "claim",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "requestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "blockDeadline",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "signer",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "signature",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xa41671e2"
+    },
+    {
+        "type": "function",
+        "name": "claimStatus",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "requestId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3d8cc2f8"
+    },
+    {
+        "type": "function",
+        "name": "dropStatus",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xf8c89ed2"
+    },
+    {
+        "type": "function",
+        "name": "dropUri",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x7d0561f5"
+    },
+    {
+        "type": "function",
+        "name": "dropperVersion",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xfe57f8ec"
+    },
+    {
+        "type": "function",
+        "name": "erc1155_type",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xb7442931"
+    },
+    {
+        "type": "function",
+        "name": "erc20_type",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc43af0d7"
+    },
+    {
+        "type": "function",
+        "name": "erc721_type",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x7d13c4ca"
+    },
+    {
+        "type": "function",
+        "name": "getDrop",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct DroppableToken",
+                "components": [
+                    {
+                        "name": "tokenType",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "tokenAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "tokenId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x6787d449"
+    },
+    {
+        "type": "function",
+        "name": "getDropAuthorization",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct TerminusAuthorization",
+                "components": [
+                    {
+                        "name": "terminusAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "poolId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x8f21fc61"
+    },
+    {
+        "type": "function",
+        "name": "numDrops",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x8bc30096"
+    },
+    {
+        "type": "function",
+        "name": "onERC1155BatchReceived",
+        "inputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0xbc197c81"
+    },
+    {
+        "type": "function",
+        "name": "onERC1155Received",
+        "inputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0xf23a6e61"
+    },
+    {
+        "type": "function",
+        "name": "onERC721Received",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x150b7a02"
+    },
+    {
+        "type": "function",
+        "name": "supportsInterface",
+        "inputs": [
+            {
+                "name": "interfaceId",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x01ffc9a7"
+    },
+    {
+        "type": "function",
+        "name": "terminus_mintable_type",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xac095509"
+    },
+    {
+        "type": "function",
+        "name": "SUPPORTS_INTERFACE_STORAGE_POSITION",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3a53ff49"
+    },
+    {
+        "type": "function",
+        "name": "buyProduct",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x53b62866"
+    },
+    {
+        "type": "function",
+        "name": "buyScalarProduct",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xc16fad97"
+    },
+    {
+        "type": "function",
+        "name": "getActiveProductsForApp",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "productIdentifiers",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc3f355e3"
+    },
+    {
+        "type": "function",
+        "name": "getProduct",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "bundleSize",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "inventory",
+                "type": "int256",
+                "internalType": "int256"
+            },
+            {
+                "name": "productName",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "costs",
+                "type": "tuple[]",
+                "internalType": "struct LibStructs.TokenAmount[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "name": "active",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "scalar",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xb9db15b4"
+    },
+    {
+        "type": "function",
+        "name": "getProductInventory",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "inventory",
+                "type": "int256",
+                "internalType": "int256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xebce622b"
+    },
+    {
+        "type": "function",
+        "name": "getProductsForApp",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "productIdentifiers",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xa72a92b7"
+    },
+    {
+        "type": "function",
+        "name": "setProductActive",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "active",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x81062080"
+    },
+    {
+        "type": "function",
+        "name": "setProductInventory",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "inventory",
+                "type": "int256",
+                "internalType": "int256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x58b80dd6"
+    },
+    {
+        "type": "function",
+        "name": "setProductName",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "productName",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x437b2185"
+    },
+    {
+        "type": "function",
+        "name": "setProductScalar",
+        "inputs": [
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "scalar",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xbfcf66b5"
+    },
+    {
+        "type": "function",
+        "name": "getFirstTxInQueue",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "time",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x1b127763"
+    },
+    {
+        "type": "function",
+        "name": "getLastTxInQueue",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "time",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xebf07984"
+    },
+    {
+        "type": "function",
+        "name": "getTxDataAtQueueIndex",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "index",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "time",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xac9623bc"
+    },
+    {
+        "type": "function",
+        "name": "getTxQueue",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "time",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x765ee218"
+    },
+    {
+        "type": "function",
+        "name": "getTxQueueFirstIdx",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "idx",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xf47b8ee1"
+    },
+    {
+        "type": "function",
+        "name": "getTxQueueLastIdx",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "idx",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe1e2b56a"
+    },
+    {
+        "type": "function",
+        "name": "getTxQueueLength",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "length",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x80976be5"
+    },
+    {
+        "type": "function",
+        "name": "generateEmbeddedRequestID",
+        "inputs": [
+            {
+                "name": "serverRequestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "appID",
+                "type": "uint32",
+                "internalType": "uint32"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "embeddedRequestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "pure",
+        "selector": "0xa65b73c5"
+    },
+    {
+        "type": "function",
+        "name": "getHoldsPoolToken",
+        "inputs": [
+            {
+                "name": "terminusAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "status",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe909158f"
+    },
+    {
+        "type": "function",
+        "name": "getMaxDisbursementPerDay",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xdc9dfd9a"
+    },
+    {
+        "type": "function",
+        "name": "getSatBankBalance",
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x86c5eceb"
+    },
+    {
+        "type": "function",
+        "name": "getServerRequestID",
+        "inputs": [
+            {
+                "name": "embeddedRequestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "serverRequestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "pure",
+        "selector": "0x7f442f8c"
+    },
+    {
+        "type": "function",
+        "name": "getTokenRegistry",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "tokens",
+                "type": "address[]",
+                "internalType": "address[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x057838bd"
+    },
+    {
+        "type": "function",
+        "name": "getTxDisbursementLimit",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xed5c306c"
+    },
+    {
+        "type": "function",
+        "name": "approveForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x85bc82e2"
+    },
+    {
+        "type": "function",
+        "name": "balanceOf",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x00fdd58e"
+    },
+    {
+        "type": "function",
+        "name": "balanceOfBatch",
+        "inputs": [
+            {
+                "name": "accounts",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x4e1273f4"
+    },
+    {
+        "type": "function",
+        "name": "burn",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf5298aca"
+    },
+    {
+        "type": "function",
+        "name": "contractURI",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe8a3d485"
+    },
+    {
+        "type": "function",
+        "name": "createPoolV1",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_transferable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "_burnable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x3bad2d82"
+    },
+    {
+        "type": "function",
+        "name": "createPoolV2",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_transferable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "_burnable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "poolURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x84fa03a1"
+    },
+    {
+        "type": "function",
+        "name": "createSimplePool",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0xb507ef52"
+    },
+    {
+        "type": "function",
+        "name": "isApprovedForAll",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe985e9c5"
+    },
+    {
+        "type": "function",
+        "name": "isApprovedForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x027b3fc2"
+    },
+    {
+        "type": "function",
+        "name": "mint",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x731133e9"
+    },
+    {
+        "type": "function",
+        "name": "mintBatch",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolIDs",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x1f7fdffa"
+    },
+    {
+        "type": "function",
+        "name": "paymentToken",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3013ce29"
+    },
+    {
+        "type": "function",
+        "name": "poolBasePrice",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x8925d013"
+    },
+    {
+        "type": "function",
+        "name": "poolIsBurnable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3c50a3c5"
+    },
+    {
+        "type": "function",
+        "name": "poolIsTransferable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x69453ce9"
+    },
+    {
+        "type": "function",
+        "name": "poolMintBatch",
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "toAddresses",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x21adca96"
+    },
+    {
+        "type": "function",
+        "name": "safeBatchTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x2eb2c2d6"
+    },
+    {
+        "type": "function",
+        "name": "safeTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf242432a"
+    },
+    {
+        "type": "function",
+        "name": "setApprovalForAll",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "approved",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xa22cb465"
+    },
+    {
+        "type": "function",
+        "name": "setContractURI",
+        "inputs": [
+            {
+                "name": "_contractURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x938e3d7b"
+    },
+    {
+        "type": "function",
+        "name": "setController",
+        "inputs": [
+            {
+                "name": "newController",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x92eefe9b"
+    },
+    {
+        "type": "function",
+        "name": "setPaymentToken",
+        "inputs": [
+            {
+                "name": "newPaymentToken",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x6a326ab1"
+    },
+    {
+        "type": "function",
+        "name": "setPoolBasePrice",
+        "inputs": [
+            {
+                "name": "newBasePrice",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x78cf2e84"
+    },
+    {
+        "type": "function",
+        "name": "setPoolBurnable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "burnable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x2365c859"
+    },
+    {
+        "type": "function",
+        "name": "setPoolController",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xdc55d0b2"
+    },
+    {
+        "type": "function",
+        "name": "setPoolTransferable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "transferable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf3dc0a85"
+    },
+    {
+        "type": "function",
+        "name": "setURI",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "poolURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x862440e2"
+    },
+    {
+        "type": "function",
+        "name": "terminusController",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x366e59e3"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolCapacity",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x5dc8bdf8"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolController",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xd0c402e5"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolSupply",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xa44cfc82"
+    },
+    {
+        "type": "function",
+        "name": "totalPools",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xab3c7e52"
+    },
+    {
+        "type": "function",
+        "name": "unapproveForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x1fbeae86"
+    },
+    {
+        "type": "function",
+        "name": "uri",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x0e89341c"
+    },
+    {
+        "type": "function",
+        "name": "withdrawPayments",
+        "inputs": [
+            {
+                "name": "toAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x0e7afec5"
+    },
+    {
+        "type": "function",
+        "name": "batchDisburseFundsToPlayers",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "to",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "token",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "countTowardPlayersLimit",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x57054ca1"
+    },
+    {
+        "type": "function",
+        "name": "disburseFundsToPlayer",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "countTowardPlayersLimit",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf565fd38"
+    },
+    {
+        "type": "function",
+        "name": "withdrawPlayerFunds",
+        "inputs": [
+            {
+                "name": "requestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "tokens",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "quantities",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "blockDeadline",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "signer",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "signature",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x2b3f22b4"
+    },
+    {
+        "type": "function",
+        "name": "withdrawPlayerFundsGenerateMessageHash",
+        "inputs": [
+            {
+                "name": "requestID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokens",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "quantities",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "blockDeadline",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "digest",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x43789612"
+    },
+    {
+        "type": "event",
+        "name": "Claimed",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "claimant",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "signer",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "requestID",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x3e356ee9"
+    },
+    {
+        "type": "event",
+        "name": "DropAuthorizationChanged",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "terminusAddress",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "poolId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x222c9c99"
+    },
+    {
+        "type": "event",
+        "name": "DropCreated",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "tokenType",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "tokenAddress",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x40952635"
+    },
+    {
+        "type": "event",
+        "name": "DropStatusChanged",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "status",
+                "type": "bool",
+                "indexed": false,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x3ee2b914"
+    },
+    {
+        "type": "event",
+        "name": "DropURIChanged",
+        "inputs": [
+            {
+                "name": "dropId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "uri",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xcd3ee26a"
+    },
+    {
+        "type": "event",
+        "name": "Withdrawal",
+        "inputs": [
+            {
+                "name": "recipient",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "tokenType",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "tokenAddress",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xd1dec43c"
+    },
+    {
+        "type": "event",
+        "name": "AdminChanged",
+        "inputs": [
+            {
+                "name": "previousAdmin",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "newAdmin",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x7e644d79"
+    },
+    {
+        "type": "event",
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "name": "previousOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8be0079c"
+    },
+    {
+        "type": "event",
+        "name": "DiamondCut",
+        "inputs": [
+            {
+                "name": "_diamondCut",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct IDiamondCut.FacetCut[]",
+                "components": [
+                    {
+                        "name": "facetAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "action",
+                        "type": "uint8",
+                        "internalType": "enum IDiamondCut.FacetCutAction"
+                    },
+                    {
+                        "name": "functionSelectors",
+                        "type": "bytes4[]",
+                        "internalType": "bytes4[]"
+                    }
+                ]
+            },
+            {
+                "name": "_init",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "_calldata",
+                "type": "bytes",
+                "indexed": false,
+                "internalType": "bytes"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8faa7087"
+    },
+    {
+        "type": "event",
+        "name": "AddedAppAdmin",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newAdmin",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xddfce258"
+    },
+    {
+        "type": "event",
+        "name": "AddedAppServer",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newServer",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x7ce2c34f"
+    },
+    {
+        "type": "event",
+        "name": "AddedTokenRegistry",
+        "inputs": [
+            {
+                "name": "newToken",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xfad617ff"
+    },
+    {
+        "type": "event",
+        "name": "AppDepositActiveChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "depositsAllowed",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xa8472cd7"
+    },
+    {
+        "type": "event",
+        "name": "AppFeesChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldFees",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.Fee[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "percent",
+                        "type": "uint8",
+                        "internalType": "uint8"
+                    }
+                ]
+            },
+            {
+                "name": "newFees",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.Fee[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "percent",
+                        "type": "uint8",
+                        "internalType": "uint8"
+                    }
+                ]
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x53acd906"
+    },
+    {
+        "type": "event",
+        "name": "AppFundsDeposited",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "depositer",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "oldBalance",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newBalance",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x4105a175"
+    },
+    {
+        "type": "event",
+        "name": "AppFundsWithdrawn",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "receiver",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "oldBalance",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newBalance",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xb12b239b"
+    },
+    {
+        "type": "event",
+        "name": "AppNameChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "appName",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8ae59a19"
+    },
+    {
+        "type": "event",
+        "name": "AppOwnershipChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xf199797c"
+    },
+    {
+        "type": "event",
+        "name": "AppWithdrawActiveChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "withdrawsAllowed",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8f1127f6"
+    },
+    {
+        "type": "event",
+        "name": "BundleSizeChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldBundleSize",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newBundleSize",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x89820353"
+    },
+    {
+        "type": "event",
+        "name": "DailyDisbursementLimitChanged",
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "oldLimit",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newLimit",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xc9ef576a"
+    },
+    {
+        "type": "event",
+        "name": "DebugActivity",
+        "inputs": [
+            {
+                "name": "method",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "caller",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xcab11c6b"
+    },
+    {
+        "type": "event",
+        "name": "DirectTokenDisbursement",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xf49672e5"
+    },
+    {
+        "type": "event",
+        "name": "InventoryChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldInventory",
+                "type": "int256",
+                "indexed": false,
+                "internalType": "int256"
+            },
+            {
+                "name": "newInventory",
+                "type": "int256",
+                "indexed": false,
+                "internalType": "int256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x08630ae5"
+    },
+    {
+        "type": "event",
+        "name": "NewAppCreated",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "appName",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x1ca996a4"
+    },
+    {
+        "type": "event",
+        "name": "NewProductCreated",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productName",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "costs",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.TokenAmount[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "name": "bundleSize",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "scalar",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x68ad0abc"
+    },
+    {
+        "type": "event",
+        "name": "ProductActivation",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "active",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x40b83553"
+    },
+    {
+        "type": "event",
+        "name": "ProductCostAdded",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "quantity",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8c03833a"
+    },
+    {
+        "type": "event",
+        "name": "ProductCostReset",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldCosts",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.TokenAmount[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xbe9a335e"
+    },
+    {
+        "type": "event",
+        "name": "ProductDeleted",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "removedProductIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x7eaef52a"
+    },
+    {
+        "type": "event",
+        "name": "ProductNameChanged",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "oldName",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "newName",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xb4c53208"
+    },
+    {
+        "type": "event",
+        "name": "ProductPurchased",
+        "inputs": [
+            {
+                "name": "buyer",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "costs",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.TokenAmount[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "name": "SKUQuantity",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "unitQuantity",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "remainingInventory",
+                "type": "int256",
+                "indexed": false,
+                "internalType": "int256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x6ba0e2da"
+    },
+    {
+        "type": "event",
+        "name": "ProductScalarSet",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "productIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "scalar",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x3a2e9e64"
+    },
+    {
+        "type": "event",
+        "name": "RemovedAppAdmin",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "removedAdmin",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xa334051b"
+    },
+    {
+        "type": "event",
+        "name": "RemovedAppServer",
+        "inputs": [
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "removedServer",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xb23b4c8c"
+    },
+    {
+        "type": "event",
+        "name": "RemovedTokenRegistry",
+        "inputs": [
+            {
+                "name": "removedToken",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x56c0b75c"
+    },
+    {
+        "type": "event",
+        "name": "TokenDisburseCancelled",
+        "inputs": [
+            {
+                "name": "roundTripId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x39922e8e"
+    },
+    {
+        "type": "event",
+        "name": "TokenDisburseSuccess",
+        "inputs": [
+            {
+                "name": "roundTripId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "yield",
+                "type": "tuple[]",
+                "indexed": false,
+                "internalType": "struct LibStructs.TokenAmount[]",
+                "components": [
+                    {
+                        "name": "token",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xdc81c4d0"
+    },
+    {
+        "type": "event",
+        "name": "TokenDisbursementFulfilled",
+        "inputs": [
+            {
+                "name": "roundTripId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "appIdentifier",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "signer",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x72716abc"
+    },
+    {
+        "type": "event",
+        "name": "TxDisbursementLimitChanged",
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "oldLimit",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newLimit",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x5a33e178"
+    },
+    {
+        "type": "event",
+        "name": "GasReturnedToUser",
+        "inputs": [
+            {
+                "name": "amountReturned",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "txPrice",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "gasSpent",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "success",
+                "type": "bool",
+                "indexed": true,
+                "internalType": "bool"
+            },
+            {
+                "name": "transactionType",
+                "type": "string",
+                "indexed": true,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x6bbde817"
+    },
+    {
+        "type": "event",
+        "name": "GasReturnerInsufficientBalance",
+        "inputs": [
+            {
+                "name": "txPrice",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "gasSpent",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "transactionType",
+                "type": "string",
+                "indexed": true,
+                "internalType": "string"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xc4b5eea2"
+    },
+    {
+        "type": "event",
+        "name": "GasReturnerMaxGasReturnedPerTransactionChanged",
+        "inputs": [
+            {
+                "name": "oldMaxGasReturnedPerTransaction",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "newMaxGasReturnedPerTransaction",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "admin",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xa72c9035"
+    },
+    {
+        "type": "event",
+        "name": "ControlTransferred",
+        "inputs": [
+            {
+                "name": "previousController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xa06677f7"
+    },
+    {
+        "type": "event",
+        "name": "PoolControlTransferred",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "previousController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xbb8e9c3c"
+    },
+    {
+        "type": "event",
+        "name": "ApprovalForAll",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "approved",
+                "type": "bool",
+                "indexed": false,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x17307eab"
+    },
+    {
+        "type": "event",
+        "name": "PoolMintBatch",
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "toAddresses",
+                "type": "address[]",
+                "indexed": false,
+                "internalType": "address[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xba627779"
+    },
+    {
+        "type": "event",
+        "name": "TransferBatch",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "values",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x4a39dc06"
+    },
+    {
+        "type": "event",
+        "name": "TransferSingle",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "value",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xc3d58168"
+    },
+    {
+        "type": "event",
+        "name": "URI",
+        "inputs": [
+            {
+                "name": "value",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x6bb7ff70"
+    }
+]
