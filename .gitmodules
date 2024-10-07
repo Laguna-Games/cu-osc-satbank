@@ -7,3 +7,6 @@
 [submodule "lib/cu-osc-diamond-template"]
 	path = lib/cu-osc-diamond-template
 	url = https://github.com/Laguna-Games/cu-osc-diamond-template
+[submodule "lib/cu-osc-common-tokens"]
+	path = lib/cu-osc-common-tokens
+	url = https://github.com/Laguna-Games/cu-osc-common-tokens
